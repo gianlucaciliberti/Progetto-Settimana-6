@@ -1,0 +1,148 @@
+// EpiShop — Settimana VI, Giorno IV
+// Customizzazione tema Bootstrap + dark mode + mixin custom card-prodotto
+
+
+// === Variabili brand ===
+
+$brand-primary: hsl(150, 60%, 30%);   // verde "naturale"
+$brand-light:   #fafafa;
+$radius-base:   8px;
+$shadow-card:   0 2px 6px rgba(0, 0, 0, 0.08);
+$shadow-card-hover: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+
+// === Override classi Bootstrap ===
+
+.btn-primary,
+.bg-primary,
+.navbar.bg-primary {
+  background-color: $brand-primary !important;
+  border-color: $brand-primary !important;
+}
+
+.btn-primary:hover {
+  background-color: darken($brand-primary, 10%) !important;
+  border-color: darken($brand-primary, 10%) !important;
+}
+
+.text-primary {
+  color: $brand-primary !important;
+}
+
+.btn-outline-primary {
+  color: $brand-primary;
+  border-color: $brand-primary;
+
+  &:hover,
+  &.active {
+    background-color: $brand-primary;
+    color: white;
+    border-color: $brand-primary;
+  }
+}
+
+
+// === Mixin: tema (parametri = colori del tema) ===
+
+@mixin tema($bg, $testo, $card-bg, $bordo, $muted) {
+  background-color: $bg;
+  color: $testo;
+
+  .card {
+    background-color: $card-bg;
+    border-color: $bordo;
+
+    .card-text {
+      color: $muted;
+    }
+  }
+
+  .card-footer {
+    background-color: $card-bg;
+  }
+
+  aside .bg-light {
+    background-color: $card-bg !important;
+    border-color: $bordo;
+    color: $testo;
+  }
+}
+
+
+// === Tema chiaro (default) ===
+
+body {
+  @include tema(
+    $bg:      $brand-light,
+    $testo:   #1a1a1a,
+    $card-bg: #ffffff,
+    $bordo:   #e0e0e0,
+    $muted:   #6c757d
+  );
+
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+
+// === Tema scuro ===
+
+body.dark {
+  @include tema(
+    $bg:      #1a1a1a,
+    $testo:   #f0f0f0,
+    $card-bg: #2a2a2a,
+    $bordo:   #444444,
+    $muted:   #b0b0b0
+  );
+}
+
+
+// === Mixin: variante card-prodotto ===
+
+@mixin card-prodotto($accent) {
+  border-top: 4px solid $accent;
+
+  .card-title {
+    color: $accent;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 18px rgba($accent, 0.3);
+  }
+}
+
+
+// === Stili custom card ===
+
+.card {
+  border-radius: $radius-base;
+  box-shadow: $shadow-card;
+  transition: box-shadow 200ms ease, transform 200ms ease;
+
+  &:hover {
+    box-shadow: $shadow-card-hover;
+    transform: translateY(-3px);
+  }
+
+  .card-title {
+    font-weight: bold;
+  }
+}
+
+
+// === Varianti card ===
+
+.card.scarpe         { @include card-prodotto(hsl(220, 60%, 40%)); }
+.card.abbigliamento  { @include card-prodotto(hsl(0, 70%, 50%));   }
+.card.accessori      { @include card-prodotto(hsl(45, 90%, 50%));  }
+
+
+// === Bottone toggle tema ===
+
+#toggle-tema {
+  border-color: rgba(255, 255, 255, 0.5);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
