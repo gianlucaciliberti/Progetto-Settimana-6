@@ -66,3 +66,7 @@ $card-shadow-hover: 0 10px 24px rgba(0, 0, 0, 0.12);
 .service-card {
   @include card-elevata();
   }
+
+.service-icon {
+  font-size: 4rem;
+}
