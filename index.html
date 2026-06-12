@@ -3,111 +3,31 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EpiShop — E-commerce</title>
+    <title>Atelier — Studio di architettura</title>
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-md bg-primary navbar-dark">
-      <div class="container">
+    <header>
+      <!-- Navbar Bootstrap (navbar-expand-md, sticky in cima) -->
+    </header>
 
-        <a class="navbar-brand fw-bold" href="#">EpiShop</a>
+    <section id="studio">
+      <!-- Hero: titolo grande, sottotitolo, CTA. Sfondo brand. min-height 80vh -->
+    </section>
 
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#nav-menu"
-                aria-controls="nav-menu" aria-expanded="false"
-                aria-label="Apri menu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <section id="servizi">
+      <!-- 3 card servizi affiancate da md in su -->
+    </section>
 
-        <div class="collapse navbar-collapse" id="nav-menu">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#prodotti">Prodotti</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Offerte</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contatti</a></li>
-          </ul>
-          <button id="toggle-tema" type="button" class="btn btn-outline-light ms-md-2 mt-2 mt-md-0">
-            Tema scuro
-          </button>
-        </div>
+    <section id="contatti">
+      <!-- Form contatti Bootstrap, larghezza limitata e centrata -->
+    </section>
 
-      </div>
-    </nav>
-
-    <div id="hero" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="bg-primary text-white text-center py-5">
-            <div class="container">
-              <h2 class="fs-1 fw-bold mb-2">Saldi di primavera</h2>
-              <p class="fs-5 m-0">Fino al 50% di sconto sui prodotti in evidenza</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="bg-success text-white text-center py-5">
-            <div class="container">
-              <h2 class="fs-1 fw-bold mb-2">Nuova collezione</h2>
-              <p class="fs-5 m-0">Scopri gli arrivi della settimana</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="bg-dark text-white text-center py-5">
-            <div class="container">
-              <h2 class="fs-1 fw-bold mb-2">Spedizione gratis</h2>
-              <p class="fs-5 m-0">Sopra i 50 € su tutto il sito</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#hero" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#hero" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </button>
-    </div>
-
-    <main id="prodotti" class="container my-5">
-      <div class="row">
-
-        <aside class="col-lg-3 d-none d-lg-block">
-          <div class="bg-light p-3 rounded border">
-            <h3 class="fs-5 fw-bold mb-3">Categorie</h3>
-            <p class="m-0 mb-2">Scarpe</p>
-            <p class="m-0 mb-2">Abbigliamento</p>
-            <p class="m-0 mb-2">Accessori</p>
-          </div>
-        </aside>
-
-        <section class="col-12 col-lg-9">
-          <h2 class="fs-3 fw-bold mb-3 text-center text-md-start">
-            Prodotti in evidenza
-          </h2>
-
-          <div id="filtri" class="mb-4">
-            <button type="button" class="btn btn-outline-primary me-2 mb-2 active" data-categoria="tutti">Tutti</button>
-            <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="scarpe">Scarpe</button>
-            <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="abbigliamento">Abbigliamento</button>
-            <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="accessori">Accessori</button>
-          </div>
-
-          <div id="contenitore-prodotti" class="row">
-            <!-- popolato da JavaScript -->
-          </div>
-        </section>
-
-      </div>
-    </main>
-
-    <footer class="bg-dark text-white py-4 mt-5">
-      <div class="container text-center">
-        <p class="m-0">© 2026 EpiShop — tutti i diritti riservati</p>
-      </div>
+    <footer>
+      <!-- 3 colonne: Atelier+indirizzo / Link / Contatti. Copyright in fondo -->
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
