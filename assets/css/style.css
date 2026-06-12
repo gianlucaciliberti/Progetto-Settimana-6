@@ -1,1 +1,40 @@
+.navbar {
+  background-color: hsl(20, 20%, 15%);
+}
+.navbar .navbar-brand {
+  color: hsl(40, 30%, 90%);
+}
+.navbar .nav-link {
+  color: hsl(40, 15%, 75%);
+}
+.navbar .nav-link:hover {
+  color: white;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
 
+.hero {
+  background-color: hsl(20, 30%, 35%);
+}
+
+.btn-hero {
+  background-color: hsl(20, 30%, 35%);
+  color: hsl(40, 30%, 90%);
+  border: none;
+}
+.btn-hero:hover {
+  background-color: hsl(20, 30%, 27%);
+}
+
+.service-card {
+  border: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/*# sourceMappingURL=style.css.map */

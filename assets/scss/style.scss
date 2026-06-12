@@ -3,6 +3,12 @@
 
 
 // === Variabili (definisci $brand-primary, $brand-secondary, $radius-base, ecc.) ===
+$nav-footer-bg: hsl(20, 20%, 15%);
+$text-light: hsl( 40, 30%, 90%);
+$text-nav: hsl(40, 15%, 75%);
+$hero-bg: hsl(20, 30%, 35%);
+$card-shadow-hover: 0 10px 24px rgba(0, 0, 0, 0.12);
+
 
 
 
@@ -15,3 +21,45 @@
 
 
 // === Stili custom delle sezioni (header sticky, hero, servizi, contatti, footer) ===
+.navbar {
+  background-color: $nav-footer-bg;
+  .navbar-brand {
+    color: $text-light;
+  }
+  .nav-link {
+    color: $text-nav;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+}
+
+.hero {
+  background-color: $hero-bg;
+}
+
+.btn-hero {
+  background-color: $hero-bg;
+  color: $text-light;
+  border: none;
+
+  &:hover {
+    background-color: darken(hsl(20, 30%, 35%), 8%);
+  }
+}
+
+.service-card {
+  border: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $card-shadow-hover;
+  }
+}
