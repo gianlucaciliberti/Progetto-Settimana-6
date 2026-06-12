@@ -1,9 +1,11 @@
 .btn-primary {
   background-color: hsl(20, 30%, 35%);
+  color: hsl(40, 30%, 90%);
   border: none;
+  transition: background-color 0.3s ease;
 }
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
-  background-color: hsl(20, 30%, 27%);
+  background-color: hsl(20, 30%, 27%) !important;
 }
 
 .bg-primary {

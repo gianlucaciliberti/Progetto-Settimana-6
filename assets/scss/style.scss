@@ -29,9 +29,12 @@ $card-shadow-hover: 0 10px 24px rgba(0, 0, 0, 0.12);
 // === Override Bootstrap (sovrascrivi .btn-primary, .bg-primary, .text-primary col tuo colore brand) ===
 .btn-primary {
   background-color: $hero-bg;
+  color: $text-light;
   border: none;
+  transition: background-color 0.3s ease;
+
   &:hover, &:active, &:focus {
-    background-color: darken(hsl(20, 30%, 35%), 8%);
+    background-color: darken(hsl(20, 30%, 35%), 8%) !important;  
   }
 }
 
